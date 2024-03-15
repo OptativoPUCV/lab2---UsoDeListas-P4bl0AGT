@@ -43,8 +43,9 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   printf("ACA");
-   imprime_lista(L);
+   int elementos = 9;
+
+   
    return L;
 }
 

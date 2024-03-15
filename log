@@ -10,3 +10,14 @@ Fri 15 Mar 2024 11:07:34 PM UTC:
  tests:  0|5
 total_score: 0/70
 169387a
+Fri 15 Mar 2024 11:59:52 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:8: error: unused variable ‘elementos’ [-Werror=unused-variable]
+   46 |    int elementos = 9;
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2036d75
