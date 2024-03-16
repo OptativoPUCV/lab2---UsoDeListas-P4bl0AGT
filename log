@@ -247,3 +247,9 @@ exercises.c:47:5: error: implicit declaration of function ‘pushfront’; did y
 cc1: all warnings being treated as errors
 Compilation failed
 49a3c55
+Sat 16 Mar 2024 12:56:05 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+74eb896
