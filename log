@@ -94,3 +94,13 @@ exercises.c:54:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 7f6ab89
+Sat 16 Mar 2024 12:07:24 AM UTC: 
+ exercises.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:6: error: invalid use of incomplete typedef ‘List’
+   49 |     L->data[i] = &elemento;
+      |      ^~
+Compilation failed
+711d38d
