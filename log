@@ -503,3 +503,14 @@ Sat 16 Mar 2024 01:58:15 AM UTC:
  tests:  0|1
 total_score: 60/70
 4e08465
+Sat 16 Mar 2024 01:59:32 AM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:148:10: error: unused variable ‘opuesto’ [-Werror=unused-variable]
+  148 |     char opuesto = obtenerOpuesto(cadena[tam-i-1]);
+      |          ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+949f11c

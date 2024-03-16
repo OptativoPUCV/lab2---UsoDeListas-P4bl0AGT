@@ -130,6 +130,7 @@ int obtenerTam(char *cadena)
 
 char obtenerOpuesto(char caracter)
 {
+  printf("caracter = %c", caracter);
   if(caracter == '{')
     return '}';
   else if(caracter == '(')
@@ -145,7 +146,7 @@ int parentesisBalanceados(char *cadena)
   for(int i = 0 ; i < (tam/2) ; i++)
   {
     char opuesto = obtenerOpuesto(cadena[tam-i-1]);
-    printf("%c y %c", cadena[i], opuesto);
+    //printf("%c y %c", cadena[i], opuesto);
     /*if(cadena[i] != opuesto)
       return 0;*/
   }
