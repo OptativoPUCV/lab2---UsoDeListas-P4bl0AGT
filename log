@@ -351,3 +351,14 @@ Sat 16 Mar 2024 01:15:41 AM UTC:
  tests:  3|2
 total_score: 40/70
 8118873
+Sat 16 Mar 2024 01:18:55 AM UTC: 
+ exercises.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:23: error: ‘L’ undeclared (first use in this function)
+  104 |   int size = get_size(L);
+      |                       ^
+exercises.c:104:23: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+4a4f3eb
