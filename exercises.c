@@ -131,6 +131,7 @@ int obtenerTam(char *cadena)
 int parentesisBalanceados(char *cadena)
 {
   int tam = obtenerTam(cadena);
+  if(tam % 2 != 0) return 0;
   for(int i = 0 ; i < (tam/2) ; i++)
      printf("%c y %c", cadena[i], cadena[tam-i-1]);
   return 1;
