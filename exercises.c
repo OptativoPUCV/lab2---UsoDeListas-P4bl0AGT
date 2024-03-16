@@ -120,11 +120,13 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
   int cont1 = 0;
   int cont2 = 0;
+  char izq[3] = {'(','[' ,'{'};
+  char der[3] = {')',']' ,'}'};
   while((*cadena) != '\0')
   {
-    if(*cadena == '(')
+    if(strchr(izq, *cadena) != NULL)
       cont1++;
-    else if(*cadena == ')')
+    else if(strchr(der, *cedena) != NULL)
       cont2++;
     
      cadena++; 

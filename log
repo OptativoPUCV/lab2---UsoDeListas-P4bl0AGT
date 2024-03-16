@@ -386,3 +386,15 @@ Sat 16 Mar 2024 01:23:33 AM UTC:
  tests:  7|1
 total_score: 60/70
 f592384
+Sat 16 Mar 2024 01:27:20 AM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:129:26: error: ‘cedena’ undeclared (first use in this function); did you mean ‘cadena’?
+  129 |     else if(strchr(der, *cedena) != NULL)
+      |                          ^~~~~~
+      |                          cadena
+exercises.c:129:26: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a5a7622
