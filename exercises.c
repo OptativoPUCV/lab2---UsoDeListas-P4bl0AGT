@@ -180,12 +180,11 @@ int parentesisBalanceados(char *cadena)
   {
     caracter1 = *(char *)top(pNormal);
     caracter2 = *(char *)top(pInvertida);
-    if(!(caracter1 == '(' && caracter2 == ')'))
+    if(!(caracter1 == '(' && caracter2 == ')') ||
+       !(caracter1 == '{' && caracter2 == '}') || 
+       !(caracter1 == '[' && caracter2 == ']'))
       return 0;
-    else if(!(caracter1 == '{' && caracter2 == '}'))
-      return 0;
-    else if(!(caracter1 == '[' && caracter2 == ']'))
-      return 0;
+
     pop(pNormal);
     pop(pInvertida);
   }
