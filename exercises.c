@@ -163,7 +163,7 @@ int parentesisBalanceados(char *cadena)
     caracter1 = *(char *)top(pNormal);
     caracter2 = *(char *)top(pInvertida);
     if(caracter1 == '(' && caracter2 == ')')
-      return 0;
+      return 1;
 
     pop(pNormal);
     pop(pInvertida);
