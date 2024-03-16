@@ -686,3 +686,9 @@ exercises.c:168:22: error: unknown escape sequence: '\N' [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 b97dae7
+Sat 16 Mar 2024 04:54:17 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|1
+total_score: 50/70
+8c45e51

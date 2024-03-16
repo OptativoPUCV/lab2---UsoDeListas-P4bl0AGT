@@ -165,7 +165,7 @@ int parentesisBalanceados(char *cadena)
     push(pNormal, (void*) &(*cadena));
     cadena++;
   }
-  printf("COMIENZO\N");
+  printf("COMIENZO\n");
   imprime_y_vacia_pila(pNormal);
   printf("\nFINAL");
   return 1;
