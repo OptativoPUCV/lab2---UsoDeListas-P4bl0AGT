@@ -253,3 +253,24 @@ Sat 16 Mar 2024 12:56:05 AM UTC:
  tests:  0|5
 total_score: 0/70
 74eb896
+Sat 16 Mar 2024 12:56:36 AM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:5: error: expected expression before ‘int’
+   47 |     int elemento = i;
+      |     ^~~
+exercises.c:46:3: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+   46 |   for(int i = 0 ; i < 10 ; i++)
+      |   ^~~
+exercises.c:48:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   48 |     pushFront(L, &elemento);
+      |     ^~~~~~~~~
+exercises.c:48:19: error: ‘elemento’ undeclared (first use in this function)
+   48 |     pushFront(L, &elemento);
+      |                   ^~~~~~~~
+exercises.c:48:19: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+4844910
