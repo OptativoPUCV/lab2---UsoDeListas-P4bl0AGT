@@ -128,17 +128,24 @@ int obtenerTam(char *cadena)
   return tam;
 }
 
+char obtenerOpuesto(char caracter)
+{
+  if(caracter == '{')
+    return '}';
+  else if(caracter == '(')
+    return ')';
+  else 
+    return ']';
+}
+
 int parentesisBalanceados(char *cadena)
 {
   int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
   for(int i = 0 ; i < (tam/2) ; i++)
   {
-    //{} y []
-    if(cadena[i] != (cadena[tam-i-1]-2))
-      return 0;
-    //()
-    else if(cadena[i] != (cadena[tam-i-1]-1))
+    char opuesto = obtenerOpuesto(cadena[tam-i-1]);
+    if(cadena[i] != opuesto)
       return 0;
   }
   return 1;
