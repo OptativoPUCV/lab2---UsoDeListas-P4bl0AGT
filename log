@@ -634,3 +634,14 @@ Sat 16 Mar 2024 04:39:39 PM UTC:
  tests:  5|1
 total_score: 50/70
 33af0c2
+Sat 16 Mar 2024 04:41:50 PM UTC: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:157:8: error: unused variable ‘caracter’ [-Werror=unused-variable]
+  157 |   char caracter;
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+701b9f0

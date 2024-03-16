@@ -153,12 +153,15 @@ char obtenerOpuesto(char caracter)
 int parentesisBalanceados(char *cadena)
 {
   Stack *pInvertida = create_stack();
+  Stack *pNormal = create_stack();
+  char caracter;
   while((*cadena) != '\0')
   {
     push(pInvertida, (void*) &(*cadena));
     cadena++;
   }
 
+  copia_pila(pInvertida, pNormal);
   
   /*int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
