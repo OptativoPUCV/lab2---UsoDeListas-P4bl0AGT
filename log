@@ -47,3 +47,14 @@ exercises.c:46:5: error: invalid use of incomplete typedef ‘List’
       |     ^~
 Compilation failed
 be8e139
+Sat 16 Mar 2024 12:00:39 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:5: error: ‘L’ is a pointer; did you mean to use ‘->’?
+   46 |    L.data[0] = 2;
+      |     ^
+      |     ->
+Compilation failed
+10c669e

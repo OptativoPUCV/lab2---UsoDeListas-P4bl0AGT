@@ -43,7 +43,7 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   L->data[0] = 2;
+   L.data[0] = 2;
 
    
    return L;
