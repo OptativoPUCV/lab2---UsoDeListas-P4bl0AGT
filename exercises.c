@@ -152,51 +152,20 @@ char obtenerOpuesto(char caracter)
 
 int parentesisBalanceados(char *cadena)
 {
-  Stack *pInvertida = create_stack();
+  //Stack *pInvertida = create_stack();
   Stack *pNormal = create_stack();
-  Stack *pAux = create_stack();
-  int *caracter;
-  int *caracter2;
+  //Stack *pAux = create_stack();
+  //int *caracter;
+  //int *caracter2;
   
 
   //copiar cadena en la pila pero al revez
   while((*cadena) != '\0')
   {
-    push(pInvertida, (void*) &(*cadena));
+    push(pNormal, (void*) &(*cadena));
     cadena++;
   }
 
-  //crear copia de seguridad
-  copia_pila(pInvertida, pAux);
-
-  //invertir
-  while(top(pAux) != NULL)
-  {
-    caracter = top(pAux);
-    push(pNormal, caracter);
-    pop(pAux);
-  }
-
-  //VERIFICAR SI SON IGUALES
-  while(top(pNormal) != NULL)
-  {
-    caracter = top(pNormal);
-    caracter2 = top(pInvertida);
-    if(*caracter != obtenerOpuesto(*caracter2))
-      return 0;
-    pop(pNormal);
-    pop(pInvertida);
-  }
-  
-  /*int tam = obtenerTam(cadena);
-  if(tam % 2 != 0) return 0;
-  char opuesto;
-  for(int i = 0 ; i < (tam/2) ; i++)
-  {
-    opuesto = obtenerOpuesto(cadena[tam-i-1]);
-    if(cadena[i] != opuesto)
-      return 0;
-  }
-  return 1;*/
+  imprime_y_vacia_pila(pNormal);
   return 1;
 }
