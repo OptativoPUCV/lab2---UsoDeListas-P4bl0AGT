@@ -173,6 +173,8 @@ int parentesisBalanceados(char *cadena)
     caracter1 = *(char *)top(pNormal);
     caracter2 = *(char *)top(pInvertida);
 
+    printf("caracter = %c y caracter = %c\n", caracter1, caracter2);
+    
     if(caracter1 != invertirCaracter(caracter2))
       return 0;
 
