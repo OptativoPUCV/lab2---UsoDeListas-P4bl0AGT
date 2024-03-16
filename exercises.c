@@ -129,6 +129,16 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
+char invertirCaracter(char caracter)
+{
+  if(caracter = ')')
+    return '(';
+  else if(caracter = '}')
+    return '{';
+  else
+    return '[';
+}
+
 int parentesisBalanceados(char *cadena)
 {
   Stack *pInvertida = create_stack();
@@ -162,9 +172,8 @@ int parentesisBalanceados(char *cadena)
   {
     caracter1 = *(char *)top(pNormal);
     caracter2 = *(char *)top(pInvertida);
-    if( (!(caracter1 == '(' && caracter2 == ')')) ||
-        (!(caracter1 == '{' && caracter2 == '}')) || 
-        (!(caracter1 == '[' && caracter2 == ']')))
+
+    if(caracter1 != invertirCaracter(caracter2)
       return 0;
 
     pop(pNormal);
