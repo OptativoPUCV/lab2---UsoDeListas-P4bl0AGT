@@ -144,3 +144,13 @@ exercises.c:50:6: error: invalid use of incomplete typedef ‘List’
       |      ^~
 Compilation failed
 5a84919
+Sat 16 Mar 2024 12:22:00 AM UTC: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:9: error: invalid use of incomplete typedef ‘List’
+   50 |     list->data[i] = elemento;
+      |         ^~
+Compilation failed
+bd526fd

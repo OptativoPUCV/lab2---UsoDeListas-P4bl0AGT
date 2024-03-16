@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
-#include "arraylist.h"
+//#include "arraylist.h"
 #include "stack.h"
 
 //#include "exercises.h"
@@ -42,14 +42,14 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-  List* L = create_list();
+  List* list = create_list();
   for(int i = 0 ; i < 10 ; i++)
   {
     int *elemento = (int *) malloc(sizeof(int));
     *elemento = (i+1);
-    L->data[i] = elemento;
+    list->data[i] = elemento;
   }
-   return L;
+   return list;
 }
 
 /*
