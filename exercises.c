@@ -155,7 +155,7 @@ int parentesisBalanceados(char *cadena)
   Stack *pInvertida = create_stack();
   while((*cadena) != '\0')
   {
-    push(pInvertida, (*cadena);
+    push(pInvertida, (void*) &(*cadena));
     cadena++;
   }
 
