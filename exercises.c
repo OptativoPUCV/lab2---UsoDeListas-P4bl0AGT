@@ -149,6 +149,7 @@ char invertirCaracter(char caracter)
 int parentesisBalanceados(char *cadena)
 {
   Stack *pila = create_stack();
+  int cont = 0;
 
   while((*cadena) != '\0')
   {
@@ -164,8 +165,9 @@ int parentesisBalanceados(char *cadena)
       
     }
     cadena++;
+    cont++;
   }
-
+  if(cont % 2 != 0) return 0;
     
 
   
