@@ -184,6 +184,8 @@ int parentesisBalanceados(char *cadena)
     caracter2 = top(pInvertida);
     if(*caracter != obtenerOpuesto(*caracter2))
       return 0;
+    pop(pNormal);
+    pop(pInvertida);
   }
   
   /*int tam = obtenerTam(cadena);
