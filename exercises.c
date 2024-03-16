@@ -108,6 +108,7 @@ void copia_pila(Stack* P1, Stack* P2)
   {
     elemento = top(P1);
     push(pAux, elemento);
+    pop(P1);
   }
   
   /*int size = get_size(P1);
