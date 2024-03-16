@@ -131,9 +131,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 char invertirCaracter(char caracter)
 {
-  if(caracter = ')')
+  if(caracter == ')')
     return '(';
-  else if(caracter = '}')
+  else if(caracter == '}')
     return '{';
   else
     return '[';
