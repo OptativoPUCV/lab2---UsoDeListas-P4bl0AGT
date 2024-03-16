@@ -142,9 +142,10 @@ int parentesisBalanceados(char *cadena)
 {
   int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
+  char opuesto;
   for(int i = 0 ; i < (tam/2) ; i++)
   {
-    char opuesto = obtenerOpuesto(cadena[tam-i-1]);
+    opuesto = obtenerOpuesto(cadena[tam-i-1]);
     if(cadena[i] != opuesto)
       return 0;
   }
