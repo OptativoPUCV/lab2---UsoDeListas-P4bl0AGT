@@ -154,14 +154,29 @@ int parentesisBalanceados(char *cadena)
 {
   Stack *pInvertida = create_stack();
   Stack *pNormal = create_stack();
-  
+  Stack *pAux = create_stack();
+  int *caracter;
+
+  //copiar cadena en la pila pero al revez
   while((*cadena) != '\0')
   {
     push(pInvertida, (void*) &(*cadena));
     cadena++;
   }
 
-  copia_pila(pInvertida, pNormal);
+  //crear copia de seguridad
+  copia_pila(pInvertida, pAux);
+
+  //invertir
+  while(top(pAux) != NULL)
+  {
+    caracter = top(pAux);
+    push(pNormal, caracter);
+    pop(pAux);
+  }
+
+  //VERIFICAR SI SON IGUALES
+  
   
   /*int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
