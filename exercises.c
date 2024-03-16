@@ -176,6 +176,9 @@ int parentesisBalanceados(char *cadena)
     pop(pAux);
   }
 
+  printf("EL PRIMER ES :%c 0\n", *(char *)top(pNormal));
+  printf("EL PRIMER ES :%c 0", *(char *)top(pInvertida));
+  
   while(top(pNormal) != NULL)
   {
     caracter1 = *(char *)top(pNormal);
@@ -189,6 +192,6 @@ int parentesisBalanceados(char *cadena)
     pop(pInvertida);
   }
   
-  printf("EL PRIMER ES :%c 0", *(char *)top(pNormal));
+  
   return 1;
 }
