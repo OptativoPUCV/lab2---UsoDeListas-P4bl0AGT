@@ -675,3 +675,14 @@ Sat 16 Mar 2024 04:52:48 PM UTC:
  tests:  5|1
 total_score: 50/70
 0367e9b
+Sat 16 Mar 2024 04:54:09 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:168:22: error: unknown escape sequence: '\N' [-Werror]
+  168 |   printf("COMIENZO\N");
+      |                      ^
+cc1: all warnings being treated as errors
+Compilation failed
+b97dae7
