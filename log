@@ -177,3 +177,16 @@ exercises.c:9:16: note: originally defined here
       |                ^~~~
 Compilation failed
 290df97
+Sat 16 Mar 2024 12:23:30 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:6:
+arraylist.c:6:8: error: redefinition of ‘struct List’
+    6 | struct List {
+      |        ^~~~
+In file included from test.c:5:
+exercises.c:9:8: note: originally defined here
+    9 | struct List {
+      |        ^~~~
+Compilation failed
+6c2fe1b

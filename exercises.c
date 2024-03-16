@@ -6,11 +6,11 @@
 #include "arraylist.h"
 #include "stack.h"
 
-typedef struct List {
+struct List {
   void* data[100];
   int current;
   int size;
-} List;
+} ;
 
 //#include "exercises.h"
 
