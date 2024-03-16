@@ -131,12 +131,19 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 char invertirCaracter(char caracter)
 {
-  if(caracter == ')')
+  if(caracter == '(')
+    return ')';
+  else if(caracter == ')')
     return '(';
+  else if(caracter == '{')
+    return '}';
   else if(caracter == '}')
-    return '{';
+    return '(';
+  else if(caracter == '[')
+    return ']';
   else
     return '[';
+    
 }
 
 int parentesisBalanceados(char *cadena)
