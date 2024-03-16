@@ -156,6 +156,8 @@ int parentesisBalanceados(char *cadena)
   Stack *pNormal = create_stack();
   Stack *pAux = create_stack();
   int *caracter;
+  int *caracter2;
+  
 
   //copiar cadena en la pila pero al revez
   while((*cadena) != '\0')
@@ -176,7 +178,13 @@ int parentesisBalanceados(char *cadena)
   }
 
   //VERIFICAR SI SON IGUALES
-  
+  while(top(pNormal) != NULL)
+  {
+    caracter = top(pNormal);
+    caracter2 = top(pInvertida);
+    if(*caracter != obtenerOpuesto(*caracter2))
+      return 0;
+  }
   
   /*int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
