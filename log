@@ -58,3 +58,21 @@ exercises.c:46:5: error: ‘L’ is a pointer; did you mean to use ‘->’?
       |     ->
 Compilation failed
 10c669e
+Sat 16 Mar 2024 12:00:54 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:46:8: error: invalid use of incomplete typedef ‘List’
+   46 |   Lista->data[0] = 2;
+      |        ^~
+exercises.c:49:11: error: ‘L’ undeclared (first use in this function)
+   49 |    return L;
+      |           ^
+exercises.c:49:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:50:1: error: control reaches end of non-void function [-Werror=return-type]
+   50 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d90051e
