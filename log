@@ -722,3 +722,14 @@ Sat 16 Mar 2024 04:57:17 PM UTC:
  tests:  5|1
 total_score: 50/70
 8e6a83c
+Sat 16 Mar 2024 04:59:03 PM UTC: 
+ exercises.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:168:45: error: ‘pNormal’ undeclared (first use in this function)
+  168 |   printf("EL PRIMER ES :%c 0", *(char *)top(pNormal));
+      |                                             ^~~~~~~
+exercises.c:168:45: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+0a3cfaa
