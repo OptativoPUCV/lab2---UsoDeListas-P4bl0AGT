@@ -126,7 +126,7 @@ int parentesisBalanceados(char *cadena) {
   {
     if(strchr(izq, *cadena) != NULL)
       cont1++;
-    else if(strchr(der, *cedena) != NULL)
+    else if(strchr(der, *cadena) != NULL)
       cont2++;
     
      cadena++; 

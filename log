@@ -398,3 +398,9 @@ exercises.c:129:26: error: ‘cedena’ undeclared (first use in this function);
 exercises.c:129:26: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a5a7622
+Sat 16 Mar 2024 01:27:25 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+71e27cb
