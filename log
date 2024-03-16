@@ -835,3 +835,17 @@ exercises.c:181:3: error: expected expression before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 eadce5b
+Sat 16 Mar 2024 05:19:50 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘invertirCaracter’:
+exercises.c:134:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  134 |   if(caracter = ')')
+      |      ^~~~~~~~
+exercises.c:136:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  136 |   else if(caracter = '}')
+      |           ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1a668f9
