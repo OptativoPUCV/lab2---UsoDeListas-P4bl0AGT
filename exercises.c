@@ -164,6 +164,6 @@ int parentesisBalanceados(char *cadena)
   {
     push(pNormal, (void *)&cadena[i]);
   }
-  printf("%c", *(char *)top(pNormal));
+  printf("EL PRIMER ES :%c 0", *(char *)top(pNormal));
   return 1;
 }
