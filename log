@@ -134,3 +134,13 @@ exercises.c:9:10: fatal error: exercises.h: No such file or directory
 compilation terminated.
 Compilation failed
 85ee26e
+Sat 16 Mar 2024 12:18:54 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:50:6: error: invalid use of incomplete typedef ‘List’
+   50 |     L->data[i] = elemento;
+      |      ^~
+Compilation failed
+5a84919
