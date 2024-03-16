@@ -885,3 +885,20 @@ Sat 16 Mar 2024 05:36:11 PM UTC:
  tests:  9|0
 total_score: 70/70
 f4fa997
+Sat 16 Mar 2024 05:48:15 PM UTC: 
+ exercises.c | 32 ++++++++++++++++++++++++--------
+ 1 file changed, 24 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:160:24: error: comparison between pointer and integer [-Werror]
+  160 |       if( !((top(pila) == '(' && (*cadena) == ')') ||
+      |                        ^~
+exercises.c:161:23: error: comparison between pointer and integer [-Werror]
+  161 |            (top(pila) == '(' && (*cadena) == ')') ||
+      |                       ^~
+exercises.c:162:23: error: comparison between pointer and integer [-Werror]
+  162 |            (top(pila) == '(' && (*cadena) == ')')) )
+      |                       ^~
+cc1: all warnings being treated as errors
+Compilation failed
+451d5f6

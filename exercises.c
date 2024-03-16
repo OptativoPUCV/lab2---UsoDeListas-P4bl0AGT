@@ -148,7 +148,28 @@ char invertirCaracter(char caracter)
 
 int parentesisBalanceados(char *cadena)
 {
-  Stack *pInvertida = create_stack();
+  Stack *pila = create_stack();
+
+  while((*cadena) != '\0')
+  {
+    if((*cadena) == '(' || (*cadena) == '{' || (*cadena) == '[')
+      push(pila, (void *) &(*cadena));
+    
+    else
+    {
+      if( !((top(pila) == '(' && (*cadena) == ')') ||
+           (top(pila) == '(' && (*cadena) == ')') ||
+           (top(pila) == '(' && (*cadena) == ')')) )
+        return 0;
+      
+    }
+    cadena++;
+  }
+
+    
+
+  
+  /*Stack *pInvertida = create_stack();
   Stack *pNormal = create_stack();
   Stack *pAux = create_stack();
   char caracter1;
@@ -172,23 +193,18 @@ int parentesisBalanceados(char *cadena)
     pop(pAux);
   }
 
-  //printf("EL PRIMER ES :%c 0\n", *(char *)top(pNormal));
-  //printf("EL PRIMER ES :%c 0", invertirCaracter(*(char *)top(pInvertida)));
-  
+  //comprobar que son par de parentesis
   while(top(pNormal) != NULL)
   {
     caracter1 = *(char *)top(pNormal);
     caracter2 = *(char *)top(pInvertida);
-
-    printf("caracter = %c y caracter = %c\n", caracter1, caracter2);
     
     if(caracter1 != invertirCaracter(caracter2))
       return 0;
 
     pop(pNormal);
     pop(pInvertida);
-  }
-  
+  }*/
   
   return 1;
 }
