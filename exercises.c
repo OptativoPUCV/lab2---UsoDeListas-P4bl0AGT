@@ -160,10 +160,9 @@ int parentesisBalanceados(char *cadena)
   
 
   //copiar cadena en la pila pero al revez
-  while((*cadena) != '\0')
+  for(int i = 0 ; cadena[i] != '\0' ; i++)
   {
-    push(pNormal, (void*) &(*cadena));
-    cadena++;
+    push(pNormal, (void *)&cadena[i]);
   }
   printf("COMIENZO\n");
   imprime_y_vacia_pila(pNormal);
