@@ -121,16 +121,20 @@ int obtenerTam(char *cadena)
 {
   int tam = 0;
   while((*cadena) != '\0')
+  {
     tam++;
+    cadena++;
+  }
   return tam;
 }
 
 int parentesisBalanceados(char *cadena)
 {
   int tam = obtenerTam(cadena);
-  for(int i = 0 ; i < tam ; i++)
-  {
+  printf("/%i/", tam);
+  /*for(int i = 0 ; i < tam ; i++)
      printf("%c y %c", cadena[i], cadena[tam-i-1]);
-  }
+  */
+  return 1;
 }
 
