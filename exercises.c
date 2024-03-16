@@ -106,7 +106,7 @@ void copia_pila(Stack* P1, Stack* P2)
 
   
   int size = get_size(P1);
-  int *elemento = first(P1);
+  int *elemento = top(P1);
   for(int i = 0 ; i < size ; i++)
   {
     push(P2, elemento);
