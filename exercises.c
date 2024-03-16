@@ -166,7 +166,7 @@ int parentesisBalanceados(char *cadena)
   }
 
   printf("EL PRIMER ES :%c 0\n", *(char *)top(pNormal));
-  printf("EL PRIMER ES :%c 0", *(char *)top(pInvertida));
+  printf("EL PRIMER ES :%c 0", invertirCaracter(*(char *)top(pInvertida)));
   
   while(top(pNormal) != NULL)
   {
