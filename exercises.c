@@ -133,7 +133,14 @@ int parentesisBalanceados(char *cadena)
   int tam = obtenerTam(cadena);
   if(tam % 2 != 0) return 0;
   for(int i = 0 ; i < (tam/2) ; i++)
-     printf("%c y %c", cadena[i], cadena[tam-i-1]);
+  {
+    //{} y []
+    if(cadena[i] != (cadena[tam-i-1]-2))
+      return 0;
+    //()
+    else if(cadena[i] != (cadena[tam-i-1]-1))
+      return 0;
+  }
   return 1;
 }
 
