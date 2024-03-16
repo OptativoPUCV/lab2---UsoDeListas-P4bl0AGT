@@ -45,8 +45,9 @@ List* crea_lista() {
   List* L = create_list();
   for(int i = 0 ; i < 10 ; i++)
   {
-    int elemento = (i+1);
-    L->data[i] = &elemento;
+    int *elemento = (int *) malloc(sizeof(int));
+    (*elemento) = (i+1);
+    L->data[i] = elemento;
   }
    return L;
 }
