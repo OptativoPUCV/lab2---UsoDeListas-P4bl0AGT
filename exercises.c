@@ -153,10 +153,8 @@ char obtenerOpuesto(char caracter)
 int parentesisBalanceados(char *cadena)
 {
   Stack *pInvertida = create_stack();
-  //Stack *pNormal = create_stack();
-  //Stack *pAux = create_stack();
-  //int *caracter;
-  //int *caracter2;
+  Stack *pNormal = create_stack();
+  Stack *pAux = create_stack();
   
 
   //copiar cadena en la pila pero al revez
@@ -165,6 +163,17 @@ int parentesisBalanceados(char *cadena)
     push(pInvertida, (void *)&(*cadena));
     cadena++;
   }
+
+  //auxiliar para copiar
+  copia_pila(pInvertida, pAux);
+
+  //copiar pila en orden invertido
+  while(top(pAux) != NULL)
+  {
+    push(pNormal, top(pAux));
+    pop(pAux);
+  }
+  
   printf("EL PRIMER ES :%c 0", *(char *)top(pInvertida));
   return 1;
 }
