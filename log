@@ -190,3 +190,13 @@ exercises.c:9:8: note: originally defined here
       |        ^~~~
 Compilation failed
 6c2fe1b
+Sat 16 Mar 2024 12:24:24 AM UTC: 
+ exercises.c | 10 +---------
+ 1 file changed, 1 insertion(+), 9 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:6: error: invalid use of incomplete typedef ‘List’
+   48 |     L->data[i] = (void *) malloc(sizeof(void));
+      |      ^~
+Compilation failed
+b9558ef

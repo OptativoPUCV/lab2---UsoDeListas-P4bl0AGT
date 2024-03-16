@@ -6,12 +6,6 @@
 #include "arraylist.h"
 #include "stack.h"
 
-struct List {
-  void* data[100];
-  int current;
-  int size;
-} ;
-
 //#include "exercises.h"
 
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
@@ -51,9 +45,7 @@ List* crea_lista() {
   List* L = create_list();
   for(int i = 0 ; i < 10 ; i++)
   {
-    int *elemento = (int *) malloc(sizeof(int));
-    *elemento = (i+1);
-    L->data[i] = elemento;
+    L->data[i] = (void *) malloc(sizeof(void));
   }
    return L;
 }
