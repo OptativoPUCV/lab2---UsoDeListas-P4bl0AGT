@@ -128,24 +128,6 @@ La función verifica si la cadena de entrada tiene sus
 paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
-
-char invertirCaracter(char caracter)
-{
-  if(caracter == '(')
-    return ')';
-  else if(caracter == ')')
-    return '(';
-  else if(caracter == '{')
-    return '}';
-  else if(caracter == '}')
-    return '{';
-  else if(caracter == '[')
-    return ']';
-  else
-    return '[';
-    
-}
-
 int parentesisBalanceados(char *cadena)
 {
   Stack *pila = create_stack();
@@ -163,51 +145,11 @@ int parentesisBalanceados(char *cadena)
             (*(char *)top(pila) == '[' && (*cadena) == ']')) )
         return 0;
       pop(pila);
-      
     }
     cadena++;
     cont++;
   }
   if(cont % 2 != 0) return 0;
-    
 
-  
-  /*Stack *pInvertida = create_stack();
-  Stack *pNormal = create_stack();
-  Stack *pAux = create_stack();
-  char caracter1;
-  char caracter2;
-  
-
-  //copiar cadena en la pila pero al revez
-  while((*cadena) != '\0')
-  {
-    push(pInvertida, (void *)&(*cadena));
-    cadena++;
-  }
-
-  //auxiliar para copiar
-  copia_pila(pInvertida, pAux);
-
-  //copiar pila en orden invertido
-  while(top(pAux) != NULL)
-  {
-    push(pNormal, top(pAux));
-    pop(pAux);
-  }
-
-  //comprobar que son par de parentesis
-  while(top(pNormal) != NULL)
-  {
-    caracter1 = *(char *)top(pNormal);
-    caracter2 = *(char *)top(pInvertida);
-    
-    if(caracter1 != invertirCaracter(caracter2))
-      return 0;
-
-    pop(pNormal);
-    pop(pInvertida);
-  }*/
-  
   return 1;
 }
