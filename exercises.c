@@ -104,7 +104,7 @@ void copia_pila(Stack* P1, Stack* P2)
 {
   Stack *pAux = create_stack();
   int *elemento;
-  //copiar pila en auxiliar y eliminar dato
+  //copiar pila en auxiliar y eliminar dato en p1
   while(top(P1) != NULL)
   {
     elemento = top(P1);
@@ -112,6 +112,7 @@ void copia_pila(Stack* P1, Stack* P2)
     pop(P1);
   }
 
+  //copiar aux en p1 y p2, ademas de eliminar dato en paux
   while(top(pAux) != NULL)
   {
     elemento = top(pAux);
@@ -119,13 +120,6 @@ void copia_pila(Stack* P1, Stack* P2)
     push(P2, elemento);
     pop(pAux);
   }
-  /*int size = get_size(P1);
-  int *elemento = first(P1);
-  for(int i = 0 ; i < size ; i++)
-  {
-    pushBack(P2, elemento);
-    elemento = next(P1);
-  }*/
 }
 
 /*
