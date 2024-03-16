@@ -47,6 +47,7 @@ List* crea_lista() {
   for(int i = 1; i <= 10 ; i++)
   {
     elemento = (int *) malloc(sizeof(int));
+    if(elemento == NULL) exit(EXIT_FAILURE);
     *elemento = i;
     pushBack(L, elemento);
   }
@@ -62,7 +63,7 @@ int sumaLista(List *L) {
   int size = get_size(L);
   void *elemento = first(L);
   int sum = 0;
-  
+
   for(int i = 0 ; i < size ; i++)
   {
     sum += *(int *)elemento;
@@ -151,4 +152,3 @@ int parentesisBalanceados(char *cadena)
   }
   return 1;
 }
-
