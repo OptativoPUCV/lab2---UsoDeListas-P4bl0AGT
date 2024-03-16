@@ -155,6 +155,8 @@ int parentesisBalanceados(char *cadena)
   Stack *pInvertida = create_stack();
   Stack *pNormal = create_stack();
   Stack *pAux = create_stack();
+  int caracter1;
+  int caracter2;
   
 
   //copiar cadena en la pila pero al revez
@@ -172,6 +174,19 @@ int parentesisBalanceados(char *cadena)
   {
     push(pNormal, top(pAux));
     pop(pAux);
+  }
+
+  while(top(pNormal) != NULL)
+  {
+    caracter1 = *(char *)top(pNormal);
+    caracter2 = *(char *)top(pInvertida);
+    if(!(caracter1 == '(' && caracter2 == ')'))
+      return 0;
+    else if(!(caracter1 == '{' && caracter2 == '}'))
+      return 0;
+    else if(!(caracter1 == '[' && caracter2 == ']'))
+      return 0;
+      
   }
   
   printf("EL PRIMER ES :%c 0", *(char *)top(pNormal));
