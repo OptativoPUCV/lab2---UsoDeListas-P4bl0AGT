@@ -497,3 +497,9 @@ exercises.c:147:10: error: unused variable ‘opuesto’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 49337ad
+Sat 16 Mar 2024 01:58:15 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|1
+total_score: 60/70
+4e08465
