@@ -235,3 +235,15 @@ exercises.c:47:5: error: implicit declaration of function ‘pushfront’; did y
 cc1: all warnings being treated as errors
 Compilation failed
 1cca44e
+Sat 16 Mar 2024 12:55:58 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:47:5: error: implicit declaration of function ‘pushfront’; did you mean ‘pushFront’? [-Werror=implicit-function-declaration]
+   47 |     pushfront(L, &i);
+      |     ^~~~~~~~~
+      |     pushFront
+cc1: all warnings being treated as errors
+Compilation failed
+49a3c55
