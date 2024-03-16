@@ -6,6 +6,12 @@
 #include "arraylist.h"
 #include "stack.h"
 
+typedef struct List {
+  void* data[100];
+  int current;
+  int size;
+} List;
+
 //#include "exercises.h"
 
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
@@ -42,14 +48,14 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-  List* list = create_list();
+  List* L = create_list();
   for(int i = 0 ; i < 10 ; i++)
   {
     int *elemento = (int *) malloc(sizeof(int));
     *elemento = (i+1);
-    list->data[i] = elemento;
+    L->data[i] = elemento;
   }
-   return list;
+   return L;
 }
 
 /*

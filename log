@@ -164,3 +164,16 @@ exercises.c:50:9: error: invalid use of incomplete typedef ‘List’
       |         ^~
 Compilation failed
 0708b3f
+Sat 16 Mar 2024 12:22:59 AM UTC: 
+ exercises.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+In file included from test.c:6:
+arraylist.c:6:8: error: redefinition of ‘struct List’
+    6 | struct List {
+      |        ^~~~
+In file included from test.c:5:
+exercises.c:9:16: note: originally defined here
+    9 | typedef struct List {
+      |                ^~~~
+Compilation failed
+290df97
