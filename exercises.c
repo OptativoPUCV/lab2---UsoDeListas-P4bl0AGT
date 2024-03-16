@@ -186,7 +186,8 @@ int parentesisBalanceados(char *cadena)
       return 0;
     else if(!(caracter1 == '[' && caracter2 == ']'))
       return 0;
-      
+    pop(pNormal);
+    pop(pInvertida);
   }
   
   printf("EL PRIMER ES :%c 0", *(char *)top(pNormal));
