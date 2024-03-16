@@ -42,8 +42,12 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* Lista = create_list();
-  Lista->data[0] = 2;
+  List* Lista = create_list();
+  for(int i = 0 ; i < 10 ; i++)
+  {
+    int elemento = (i+1);
+    Lista->data[i] = &elemento;
+  }
 
    
    return L;

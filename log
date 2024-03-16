@@ -76,3 +76,21 @@ exercises.c:50:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 d90051e
+Sat 16 Mar 2024 12:07:07 AM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:10: error: invalid use of incomplete typedef ‘List’
+   49 |     Lista->data[i] = &elemento;
+      |          ^~
+exercises.c:53:11: error: ‘L’ undeclared (first use in this function)
+   53 |    return L;
+      |           ^
+exercises.c:53:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:54:1: error: control reaches end of non-void function [-Werror=return-type]
+   54 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7f6ab89
