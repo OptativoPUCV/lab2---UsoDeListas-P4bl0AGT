@@ -117,23 +117,20 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
-  int cont1 = 0;
-  int cont2 = 0;
-  char izq[4] = "({[";
-  char der[4] = ")]}";
+int obtenerTam(char *cadena)
+{
+  int tam = 0;
   while((*cadena) != '\0')
+    tam++;
+  return tam;
+}
+
+int parentesisBalanceados(char *cadena)
+{
+  int tam = obtenerTam(cadena);
+  for(int i = 0 ; i < tam ; i++)
   {
-    if(strchr(izq, *cadena) != NULL)
-      cont1++;
-    else if(strchr(der, *cadena) != NULL)
-      cont2++;
-    
-     cadena++; 
+     printf("%c y %c", cadena[i], cadena[tam-i-1]);
   }
-  if(cont1 == cont2)
-    return 1;
-  else
-    return 0;
 }
 
