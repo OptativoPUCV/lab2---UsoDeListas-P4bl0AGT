@@ -129,34 +129,13 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int obtenerTam(char *cadena)
-{
-  int tam = 0;
-  while((*cadena) != '\0')
-  {
-    tam++;
-    cadena++;
-  }
-  return tam;
-}
-
-char obtenerOpuesto(char caracter)
-{
-  if(caracter == '}')
-    return '{';
-  else if(caracter == ')')
-    return '(';
-  else 
-    return '[';
-}
-
 int parentesisBalanceados(char *cadena)
 {
   Stack *pInvertida = create_stack();
   Stack *pNormal = create_stack();
   Stack *pAux = create_stack();
-  int caracter1;
-  int caracter2;
+  char caracter1;
+  char caracter2;
   
 
   //copiar cadena en la pila pero al revez
