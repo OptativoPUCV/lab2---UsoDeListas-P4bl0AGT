@@ -64,7 +64,10 @@ int sumaLista(List *L) {
   int sum = 0;
   
   for(int i = 0 ; i < size ; i++)
+  {
     sum += *(int *)elemento;
+    elemento = next(L);
+  }
   return sum;
 }
 
