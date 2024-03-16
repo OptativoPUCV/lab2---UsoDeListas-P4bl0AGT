@@ -138,7 +138,7 @@ char invertirCaracter(char caracter)
   else if(caracter == '{')
     return '}';
   else if(caracter == '}')
-    return '(';
+    return '{';
   else if(caracter == '[')
     return ']';
   else
